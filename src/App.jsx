@@ -1,14 +1,15 @@
-import Connexion from './Pages/connexion';
-import Inscription from './Pages/inscription';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Connexion from "./Pages/connexion";
+import Inscription from "./Pages/inscription";
 
 function App() {
-
   return (
-    <>
-      <Connexion />
-    </>
-  )
+    <Routes>
+      <Route path="/connexion" element={<Connexion />} />
+      <Route path="/inscription" element={<Inscription />} />
+      <Route path="*" element={<Connexion />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

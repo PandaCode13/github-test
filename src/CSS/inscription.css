@@ -1,0 +1,138 @@
+.inscription-page {
+  width: min(100% - 32px, 520px);
+  margin: 40px auto;
+  padding: 38px;
+  border: 1px solid rgba(170, 59, 255, 0.16);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top right, rgba(170, 59, 255, 0.16), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 244, 255, 0.95));
+  box-shadow:
+    0 28px 70px rgba(33, 18, 63, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.inscription-page h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2.15rem, 4vw, 3.1rem);
+  line-height: 1.05;
+}
+
+.inscription-subtitle {
+  margin: 0 0 28px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.inscription-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 16px;
+}
+
+.inscription-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inscription-form .form-group:nth-child(3),
+.inscription-form .form-group:nth-child(4),
+.inscription-form .form-group:nth-child(5),
+.inscription-form .form-group:nth-child(6),
+.inscription-form button {
+  grid-column: 1 / -1;
+}
+
+.inscription-form label {
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.inscription-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(129, 118, 148, 0.24);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-h);
+  font: inherit;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.inscription-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(170, 59, 255, 0.12);
+}
+
+.inscription-form button {
+  margin-top: 6px;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #8f2dff, #c456ff);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 18px 30px rgba(143, 45, 255, 0.25);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.inscription-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 34px rgba(143, 45, 255, 0.3);
+  filter: brightness(1.03);
+}
+
+.inscription-form button:active {
+  transform: translateY(0);
+}
+
+.inscription-link {
+  display: inline-flex;
+  margin-top: 22px;
+  color: #8f2dff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.inscription-link:hover {
+  color: #6e18d7;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .inscription-page {
+    width: calc(100% - 24px);
+    margin: 24px auto;
+    padding: 26px 18px;
+    border-radius: 22px;
+  }
+
+  .inscription-form {
+    grid-template-columns: 1fr;
+  }
+
+  .inscription-form .form-group:nth-child(3),
+  .inscription-form .form-group:nth-child(4),
+  .inscription-form .form-group:nth-child(5),
+  .inscription-form .form-group:nth-child(6),
+  .inscription-form button {
+    grid-column: auto;
+  }
+}
